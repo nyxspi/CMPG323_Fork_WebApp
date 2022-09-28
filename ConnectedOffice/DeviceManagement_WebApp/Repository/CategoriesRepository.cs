@@ -17,10 +17,10 @@ namespace DeviceManagement_WebApp.Repository
 
 
 
-        public Service GetMostRecentCategory()
+        /*public Service GetMostRecentCategory()
         {
             return _context.Category.OrderByDescending(category => category.DateCreated).FirstOrDefault();
-        }
+        }*/
 
       
 
@@ -29,7 +29,14 @@ namespace DeviceManagement_WebApp.Repository
         {
             return _context.Category.ToList();
         }
-       
+
+        public Category GetMostRecentCategory()
+        {
+            throw new NotImplementedException();
+        }
+
+
+
     }
    
 }

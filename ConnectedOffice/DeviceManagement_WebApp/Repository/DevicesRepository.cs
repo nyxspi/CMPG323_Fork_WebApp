@@ -13,10 +13,10 @@ namespace DeviceManagement_WebApp.Repository
         public DevicesRepository(ConnectedOfficeContext context) : base(context)
         { }
 
-        public Service GetMostRecentDevice()
+        /*public Service GetMostRecentDevice()
         {
             return _context.Device.OrderByDescending(device => device.DateCreated).FirstOrDefault();
-        }
+        }*/
 
 
 
@@ -26,5 +26,9 @@ namespace DeviceManagement_WebApp.Repository
             return _context.Device.ToList();
         }
 
+        public Device GetMostRecentDevice()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

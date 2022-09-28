@@ -16,10 +16,10 @@ namespace DeviceManagement_WebApp.Repository
 
 
 
-        public Service GetMostRecentZones()
+        /*public Service GetMostRecentZones()
         {
             return _context.Zone.OrderByDescending(zones => zones.DateCreated).FirstOrDefault();
-        }
+        }*/
 
 
 
@@ -29,6 +29,9 @@ namespace DeviceManagement_WebApp.Repository
             return _context.Zone.ToList();
         }
 
-
+        public Zone GetMostRecentZones()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace DeviceManagement_WebApp.Controllers
             _zonesRepository = zonesRepository;
         }
 
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
             return View(_zonesRepository.GetAll());
         }
@@ -30,13 +30,13 @@ namespace DeviceManagement_WebApp.Controllers
 
 
 
-        public ZonesController(ConnectedOfficeContext context)
+        /*public ZonesController(ConnectedOfficeContext context)
         {
             _context = context;
-        }
+        }*/
 
         // GET: Zones
-       /* public async Task<IActionResult> Index()
+        /*public async Task<IActionResult> Index()
         {
             return View(await _context.Zone.ToListAsync());
         }*/

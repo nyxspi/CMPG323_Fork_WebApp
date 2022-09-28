@@ -22,20 +22,19 @@ namespace DeviceManagement_WebApp.Controllers
             _devicesRepository = devicesRepository;
         }
 
-        public async Task<ActionResult> Index()
+        public ActionResult Index()
         {
             return View(_devicesRepository.GetAll());
         }
 
 
-
-        public DevicesController(ConnectedOfficeContext context)
+        /*public DevicesController(ConnectedOfficeContext context)
         {
             _context = context;
-        }
+        }*/
 
         // GET: Devices
-       /* public async Task<IActionResult> Index()
+        /*public async Task<IActionResult> Index()
         {
             var connectedOfficeContext = _context.Device.Include(d => d.Category).Include(d => d.Zone);
             return View(await connectedOfficeContext.ToListAsync());
