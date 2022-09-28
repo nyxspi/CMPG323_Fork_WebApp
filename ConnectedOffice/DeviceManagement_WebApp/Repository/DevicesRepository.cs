@@ -9,7 +9,7 @@ namespace DeviceManagement_WebApp.Repository
 {
     public class DevicesRepository : GenericRepository<Device>, IDevicesRepository
     {
-        //private readonly ConnectedOfficeContext _context = new ConnectedOfficeContext();
+        private readonly ConnectedOfficeContext _context = new ConnectedOfficeContext();
         public DevicesRepository(ConnectedOfficeContext context) : base(context)
         { }
 

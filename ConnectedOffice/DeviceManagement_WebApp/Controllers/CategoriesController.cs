@@ -14,8 +14,6 @@ namespace DeviceManagement_WebApp.Controllers
     public class CategoriesController : Controller
     {
         //GET
-
-
         private readonly ICategoriesRepository _categoriesRepository;
         public CategoriesController(ICategoriesRepository categoriesRepository)
         {

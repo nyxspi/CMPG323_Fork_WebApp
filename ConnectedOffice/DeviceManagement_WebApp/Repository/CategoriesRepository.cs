@@ -11,7 +11,7 @@ namespace DeviceManagement_WebApp.Repository
 {
     public class CategoriesRepository : GenericRepository<Category>, ICategoriesRepository
     { 
-        //private readonly ConnectedOfficeContext _context = new ConnectedOfficeContext();
+        private readonly ConnectedOfficeContext _context = new ConnectedOfficeContext();
         public CategoriesRepository(ConnectedOfficeContext context) : base(context)
         { }
 
