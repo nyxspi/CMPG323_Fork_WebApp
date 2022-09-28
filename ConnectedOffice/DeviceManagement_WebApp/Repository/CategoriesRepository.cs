@@ -29,7 +29,7 @@ namespace DeviceManagement_WebApp.Repository
         {
             return _context.Category.ToList();
         }
-
+       
     }
    
 }
