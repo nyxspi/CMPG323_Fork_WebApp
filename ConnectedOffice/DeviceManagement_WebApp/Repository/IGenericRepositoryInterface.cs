@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DeviceManagement_WebApp.Repository
 {
-    public class IRepositoryInterface
+    public class IGenericRepositoryInterface
     {
         public interface IGenericRepository<T> where T : class
         {

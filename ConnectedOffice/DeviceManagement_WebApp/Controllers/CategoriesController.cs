@@ -7,18 +7,25 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DeviceManagement_WebApp.Data;
 using DeviceManagement_WebApp.Models;
+using DeviceManagement_WebApp.Repository;
 
 namespace DeviceManagement_WebApp.Controllers
 {
     public class CategoriesController : Controller
     {
         //GET
-        /*public async Task<IActionResult> Index()
+
+
+        private readonly ICategoriesRepository _categoriesRepository;
+        public CategoriesController(ICategoriesRepository categoriesRepository)
         {
-            CategoriesRepository CategoriesRepository = new CategoriesRepository();
-            var results = CategoriesRepository.Getall();
-            return View(results);
-        }*/
+            _categoriesRepository = categoriesRepository;
+        }
+
+        public async Task<ActionResult> Index()
+        {
+            return View(_categoriesRepository.GetAll());
+        }
 
 
         private readonly ConnectedOfficeContext _context;
@@ -29,10 +36,10 @@ namespace DeviceManagement_WebApp.Controllers
         }
 
         // GET: Categories
-        public async Task<IActionResult> Index()
+        /*public async Task<IActionResult> Index()
         {
             return View(await _context.Category.ToListAsync());
-        }
+        }*/
 
         // GET: Categories/Details/5
         public async Task<IActionResult> Details(Guid? id)

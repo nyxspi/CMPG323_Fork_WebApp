@@ -5,12 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
-using static DeviceManagement_WebApp.Repository.IRepository;
+//using static DeviceManagement_WebApp.Repository.IGenericRepository;
 
 namespace DeviceManagement_WebApp.Repository
 {
-    public class IRepository
-    {
+   // public class IGenericRepository
+    //{
 
 
     public interface IGenericRepository<T> where T : class
@@ -61,5 +61,5 @@ namespace DeviceManagement_WebApp.Repository
         }
     }
   }
- }
+ //}
 
